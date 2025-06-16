@@ -27,7 +27,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-left">
           <a href="#home" className="home-link">
-            About
+            Welcome to my personal website!
           </a>
         </div>
 
@@ -37,22 +37,24 @@ function App() {
           <span></span>
         </div>
 
-        <div className={`nav-right ${navOpen ? "open" : ""}`}>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#blog">Blog</a>
-          <a href="#connect">Contact</a>
-          <div
-            className="toggle-mode"
-            onClick={() => setDarkMode(!darkMode)}
-            role="switch"
-            aria-checked={darkMode}
-            tabIndex={0}
-            onKeyDown={(e) => e.key === "Enter" && setDarkMode(!darkMode)}
-          >
-            {darkMode ? "☀️" : "🌙"}
-          </div>
-        </div>
+        <div className={`nav-right ${navOpen ? 'open' : ''}`}>
+  <a href="#services" onClick={() => setNavOpen(false)}>Services</a>
+  <a href="#projects" onClick={() => setNavOpen(false)}>Projects</a>
+  <a href="#blog" onClick={() => setNavOpen(false)}>Blog</a>
+  <a href="#connect" onClick={() => setNavOpen(false)}>Contact</a>
+  <div 
+    className="toggle-mode" 
+    onClick={() => setDarkMode(!darkMode)}
+    role="switch"
+    aria-checked={darkMode}
+    tabIndex={0}
+    onKeyDown={(e) => e.key === 'Enter' && setDarkMode(!darkMode)}
+  >
+    {darkMode ? "☀️" : "🌙"}
+  </div>
+</div>
+
+        
       </nav>
 
       <div>
@@ -69,9 +71,13 @@ function App() {
               </h1>
               
               <p className="roles">Web Developer </p>
-              <p className="intro">
+             
+            </div>
+          </div>
+        </section>
+<section> <p className="intro">
                
-                Hey there! Welcome to my personal website!  I’m passionate about
+                Hey there! I’m passionate about
                 building websites that are both visually engaging and
                 technically robust. I enjoy crafting dynamic user interfaces
                 with <strong>React.js</strong> and developing efficient backend
@@ -79,11 +85,7 @@ function App() {
                 , and <strong>MongoDB</strong>. This space is where I share my
                 projects, development journey, and the lessons I learn along the
                 way
-              </p>
-            </div>
-          </div>
-        </section>
-
+              </p></section>
         <section className="section" id="about">
           <h2>About Me</h2>
           <p>

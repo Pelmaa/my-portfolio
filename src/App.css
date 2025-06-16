@@ -55,6 +55,34 @@ html, body {
   align-items: center;
   gap: 1.5rem;
 }
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 60px; /* below the navbar */
+    left: 0; /* move to left instead of right */
+    background-color: white;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .nav-right.open {
+    display: flex;
+  }
+
+  .nav-right a {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* align text to left */
+  }
+}
 
 /* Navbar links */
 .navbar a {
