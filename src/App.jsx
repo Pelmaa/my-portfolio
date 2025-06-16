@@ -40,16 +40,26 @@ function App() {
         animate={{ opacity: 1 }}
       >
         <section className="home" id="home">
-          <h1>
-            Hi, I'm <span className="highlight">Pema Wangchuk</span> 👋
-          </h1>
-          <p className="roles">Web Developer </p>
-          <p className="intro">
-            Welcome to my personal website! I enjoy building clean and simple
-            websites using <strong>React.js</strong>, and I write about tech,
-            coding, and my personal projects.
-          </p>
+          <div className="home-content">
+            <img
+              src="https://media-del1-1.cdn.whatsapp.net/v/t61.24694-24/491868579_718230300609029_1705008702836889964_n.jpg?ccb=11-4&oh=01_Q5Aa1wF4TeN98OimkTyM8yflL6GYjbAZaXx_E7lQAk1BTeVv1g&oe=685CECFD&_nc_sid=5e03e0&_nc_cat=107"
+              alt="Pema Wangchuk"
+              className="profile-pic-side"
+            />
+            <div className="home-text">
+              <h1>
+                Hi, I'm <span className="highlight">Pema Wangchuk</span> 👋
+              </h1>
+              <p className="roles">Web Developer </p>
+              <p className="intro">
+                Welcome to my personal website! I enjoy building clean and
+                simple websites using <strong>React.js</strong>, and I write
+                about tech, coding, and my personal projects.
+              </p>
+            </div>
+          </div>
         </section>
+
         <section className="section" id="about">
           <h2>About Me</h2>
           <p>
@@ -80,15 +90,15 @@ function App() {
           <div className="skills-rated">
             <div className="skill-bar">
               <label>HTML:5</label>
-              <progress value="85" max="100"></progress> 70%
+              <progress value="70" max="100"></progress> 80%
             </div>
             <div className="skill-bar">
               <label>React.js</label>
-              <progress value="85" max="100"></progress> 70%
+              <progress value="60" max="100"></progress> 70%
             </div>
             <div className="skill-bar">
               <label>Tailwind CSS</label>
-              <progress value="80" max="100"></progress> 70%
+              <progress value="60" max="100"></progress> 70%
             </div>
             <div className="skill-bar">
               <label>JavaScript</label>
@@ -104,7 +114,7 @@ function App() {
             </div>
             <div className="skill-bar">
               <label>Typescript</label>
-              <progress value="70" max="100"></progress> 30%
+              <progress value="30" max="100"></progress> 30%
             </div>
           </div>
         </section>
