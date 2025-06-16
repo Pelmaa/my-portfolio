@@ -1,12 +1,26 @@
 import { useState } from "react";
-import { SiX } from "react-icons/si";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  SiExpress,
+  SiMongodb,
+  SiTypescript,
+  SiVite,
+  SiX,
+} from "react-icons/si";
+import {
+  FaCss3Alt,
+  FaGithub,
+  FaHtml5,
+  FaJs,
+  FaLinkedin,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { motion } from "framer-motion";
 import "./App.css";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
@@ -17,12 +31,19 @@ function App() {
           </a>
         </div>
 
-        <div className="nav-right">
+        <div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div className={`nav-right ${navOpen ? "open" : ""}`}>
+          <a href="#services">Services</a>
           <a href="#projects">Projects</a>
           <a href="#blog">Blog</a>
           <a href="#connect">Contact</a>
           <div
-            className="toggle-mode, nav-right"
+            className="toggle-mode"
             onClick={() => setDarkMode(!darkMode)}
             role="switch"
             aria-checked={darkMode}
@@ -34,11 +55,7 @@ function App() {
         </div>
       </nav>
 
-      <motion.div
-        className="container"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
+      <div>
         <section className="home" id="home">
           <div className="home-content">
             <img
@@ -50,11 +67,18 @@ function App() {
               <h1>
                 Hi, I'm <span className="highlight">Pema Wangchuk</span> 👋
               </h1>
+              
               <p className="roles">Web Developer </p>
               <p className="intro">
-                Welcome to my personal website! I enjoy building clean and
-                simple websites using <strong>React.js</strong>, and I write
-                about tech, coding, and my personal projects.
+               
+                Hey there! Welcome to my personal website!  I’m passionate about
+                building websites that are both visually engaging and
+                technically robust. I enjoy crafting dynamic user interfaces
+                with <strong>React.js</strong> and developing efficient backend
+                systems using <strong>Node.js</strong>, <strong>Express</strong>
+                , and <strong>MongoDB</strong>. This space is where I share my
+                projects, development journey, and the lessons I learn along the
+                way
               </p>
             </div>
           </div>
@@ -65,13 +89,12 @@ function App() {
           <p>
             Motivated and detail-oriented science graduate with a Bachelor of
             Science in Physics and Chemistry from Sherubtse College with
-            foundational knowledge in coding. Recently, I completed a
-            three-month training program in web development and design, which
-            significantly enhanced my coding and design skills. I enjoy
-            exploring new technologies and contributing to open source projects.
-            When I’m not coding, I like reading, hiking, and learning about
-            design. I am eager to contribute my technical, analytical, and
-            teamwork skills in a dynamic and challenging environment.
+            foundational knowledge in coding. Recently, I completed a training
+            program in web development and design, which significantly enhanced
+            my coding and design skills. I enjoy exploring new technologies and
+            contributing to open source projects. I am eager to contribute my
+            technical, analytical, and teamwork skills in a dynamic and
+            challenging environment.
           </p>
         </section>
 
@@ -79,44 +102,122 @@ function App() {
           <h2>Tech Stack</h2>
           <ul>
             <li>Languages: HTML, CSS, JavaScript</li>
-            <li>Frameworks: React, Vite</li>
-            <li>Styling: Tailwind CSS,</li>
-            <li>Tools: Git, GitHub, VS Code</li>
+            <li>Frameworks: React js, Vite</li>
+            <li>Backend: Node.js, Express, MongoDB</li>
+
+            <li>Styling: CSS</li>
+            <li>Tools: GitHub, VS Code</li>
           </ul>
         </section>
 
         <section className="section" id="skills">
-          <h2> Skills</h2>
-          <div className="skills-rated">
-            <div className="skill-bar">
-              <label>HTML:5</label>
-              <progress value="70" max="100"></progress> 80%
+          <h2>Skills</h2>
+          <div className="skill-icons">
+            <div className="icon-circle">
+              <FaHtml5 size={32} color="#e44d26" />
+              <span>HTML5</span>
             </div>
-            <div className="skill-bar">
-              <label>React.js</label>
-              <progress value="60" max="100"></progress> 70%
+            <div className="icon-circle">
+              <FaCss3Alt size={32} color="#1572B6" />
+              <span>CSS3</span>
             </div>
-            <div className="skill-bar">
-              <label>Tailwind CSS</label>
-              <progress value="60" max="100"></progress> 70%
+
+            <div className="icon-circle">
+              <FaJs size={32} color="#f7df1e" />
+              <span>JavaScript</span>
             </div>
-            <div className="skill-bar">
-              <label>JavaScript</label>
-              <progress value="90" max="100"></progress> 70%
+            <div className="icon-circle">
+              <FaReact size={32} color="#61dafb" />
+              <span>React.js</span>
             </div>
-            <div className="skill-bar">
-              <label>Git</label>
-              <progress value="75" max="100"></progress> 65%
+            <div className="icon-circle">
+              <SiVite size={32} color="#646CFF" />
+              <span>Vite</span>
             </div>
-            <div className="skill-bar">
-              <label>Vite</label>
-              <progress value="70" max="100"></progress> 70%
+            <div className="icon-circle">
+              <FaNodeJs size={32} color="#3c873a" />
+              <span>Node.js</span>
             </div>
-            <div className="skill-bar">
-              <label>Typescript</label>
-              <progress value="30" max="100"></progress> 30%
+            <div className="icon-circle">
+              <SiExpress size={32} color="#000000" />
+              <span>Express</span>
+            </div>
+            <div className="icon-circle">
+              <SiMongodb size={32} color="#47A248" />
+              <span>MongoDB</span>
+            </div>
+            <div className="icon-circle">
+              <FaGithub size={32} color="#000000" />
+              <span>GitHub</span>
+            </div>
+
+            <div className="icon-circle">
+              <SiTypescript size={32} color="#3178c6" />
+              <span>TypeScript</span>
             </div>
           </div>
+        </section>
+
+        <section className="section" id="softskills">
+          <h2>Other Strengths</h2>
+          <ul>
+            <li>
+              <strong>Debugging:</strong> Able to quickly identify and resolve
+              code issues using console logs.
+            </li>
+            <li>
+              <strong>Attention to Detail:</strong> Focused on clean, consistent
+              UI and well-structured code.
+            </li>
+            <li>
+              <strong>Team Communication:</strong> Comfortable collaborating,
+              reviewing code, and contributing in team environments.
+            </li>
+          </ul>
+        </section>
+
+        <section className="section" id="services">
+          <h2>Services</h2>
+          <div className="services">
+            <div className="service-card">
+              <h3>Frontend Development</h3>
+              <p>
+                I create responsive and visually appealing websites using
+                React.js, Tailwind CSS, and modern tools like Vite.
+              </p>
+            </div>
+            <div className="service-card">
+              <h3>Backend Development</h3>
+              <p>
+                I build robust APIs and server-side logic using Node.js,
+                Express, and MongoDB for seamless integration with frontend
+                apps.
+              </p>
+            </div>
+            <div className="service-card">
+              <h3>Full-Stack Solutions</h3>
+              <p>
+                End-to-end web application development — from UI design to
+                backend logic — all in one package.
+              </p>
+            </div>
+            <div className="service-card">
+              <h3>Deployment & Hosting</h3>
+              <p>
+                Deploying web applications using platforms like Netlify, Vercel,
+                and Render for fast and reliable delivery.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="section get-in-touch">
+          <h2>Get in Touch</h2>
+          <p>
+            Have a project in your mind?
+            <a href="#connect" className="btn-contact">
+              Contact Me
+            </a>
+          </p>
         </section>
 
         <section className="section" id="projects">
@@ -208,7 +309,7 @@ function App() {
         <footer className="footer">
           Thanks for visiting! Feel free to explore my work or reach out.
         </footer>
-      </motion.div>
+      </div>
     </div>
   );
 }
