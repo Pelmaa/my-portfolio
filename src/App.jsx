@@ -61,7 +61,7 @@ function App() {
         <section className="home" id="home">
           <div className="home-content">
             <img
-              src="https://media-del1-1.cdn.whatsapp.net/v/t61.24694-24/491868579_718230300609029_1705008702836889964_n.jpg?ccb=11-4&oh=01_Q5Aa1wF4TeN98OimkTyM8yflL6GYjbAZaXx_E7lQAk1BTeVv1g&oe=685CECFD&_nc_sid=5e03e0&_nc_cat=107"
+              src="https://avatars.githubusercontent.com/u/205863820?v=4"
               alt="Pema Wangchuk"
               className="profile-pic-side"
             />
