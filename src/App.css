@@ -446,24 +446,6 @@ progress::-webkit-progress-value {
   }
 }
 
-/* Buttons */
-.btn-contact {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #007acc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn-contact:hover {
-  background-color: #005fa3;
-}
-
 .app.dark .btn-contact {
   background-color: #3399ff;
   color: #000;

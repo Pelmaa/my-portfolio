@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   SiExpress,
   SiMongodb,
-  SiTypescript,
+
   SiVite,
   SiX,
 } from "react-icons/si";
@@ -107,7 +107,7 @@ function App() {
             <li>Frameworks: React js, Vite</li>
             <li>Backend: Node.js, Express, MongoDB</li>
 
-            <li>Styling: CSS</li>
+            <li>Styling: CSS3</li>
             <li>Tools: GitHub, VS Code</li>
           </ul>
         </section>
@@ -153,10 +153,7 @@ function App() {
               <span>GitHub</span>
             </div>
 
-            <div className="icon-circle">
-              <SiTypescript size={32} color="#3178c6" />
-              <span>TypeScript</span>
-            </div>
+        
           </div>
         </section>
 
@@ -185,7 +182,7 @@ function App() {
               <h3>Frontend Development</h3>
               <p>
                 I create responsive and visually appealing websites using
-                React.js, Tailwind CSS, and modern tools like Vite.
+                React.js,CSS,and modern tools like Vite.
               </p>
             </div>
             <div className="service-card">
@@ -206,17 +203,17 @@ function App() {
             <div className="service-card">
               <h3>Deployment & Hosting</h3>
               <p>
-                Deploying web applications using platforms like Netlify, Vercel,
+                Deploying web applications using platforms like Netlify,
                 and Render for fast and reliable delivery.
               </p>
             </div>
           </div>
         </section>
-        <section className="section get-in-touch">
+        <section className="section" id="get-in-touch">
           <h2>Get in Touch</h2>
           <p>
             Have a project in your mind?
-            <a href="#connect" className="btn-contact">
+            <a href="#connect" className="icon-link">
               Contact Me
             </a>
           </p>
@@ -240,19 +237,28 @@ function App() {
           </ul>
         </section>
 
-        <section className="section" id="blog">
-          <h2>Blog (Coming Soon)</h2>
-          <p>
-            I’ll be posting project walkthroughs, and personal tech reflections
-            here. Stay tuned!
-          </p>
-        </section>
+      <section className="section" id="blog">
+  <h2>My Blog</h2>
+  <p>
+    I share project walkthroughs, coding tips, and tech reflections on my blog.
+    Check it out here:
+    <a 
+      href="https://pelmaa-blog.netlify.app" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="icon-link"
+    >
+      Visit My Blog
+    </a>
+  </p>
+</section>
+
 
         <section className="section">
           <h2>Resume</h2>
           <p>
             Want to know more about my experience?
-            <a href="/resume.pdf" download className="icon-link">
+            <a href="/Pema_Wangchuk_Resume.pdf" download className="icon-link">
               Download my resume
             </a>
             .
@@ -297,12 +303,12 @@ function App() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/Pema_Wangchuk"
+                href="https://www.linkedin.com/in/pema-wangchuk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon-link"
               >
-                <FaLinkedin size={22} /> linkedin.com/in/Pema_Wangchuk
+                <FaLinkedin size={22} /> linkedin.com/in/pema-wangchuk
               </a>
             </li>
           </ul>
