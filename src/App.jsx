@@ -303,7 +303,7 @@ function App() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/pema-wangchuk"
+                href="https://www.linkedin.com/in/pema-wangchuk-887869148"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon-link"
